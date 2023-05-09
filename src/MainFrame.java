@@ -46,12 +46,14 @@ public class MainFrame extends JFrame{
         String tomegStr = this.tomegPanel.getValue();
         if(!this.checkInput(tomegStr)){
             JOptionPane.showMessageDialog(this, "Csak számjegy!");
+            return; // hogy ne számoljon 
         }
         double tomeg = Double.parseDouble(tomegStr);
         
         String magassagStr = this.magassagPanel.getValue();
         if(!this.checkInput(magassagStr)){
             JOptionPane.showMessageDialog(this, "Csak számjegy!");
+            return; // hogy ne számoljon 
         }
         double magassag = Double.parseDouble(magassagStr);
 
@@ -65,7 +67,7 @@ public class MainFrame extends JFrame{
 
     public boolean checkInput(String input){
         boolean ok = false;
-        if(input.matches("[0-9]+")){
+        if(input.matches("[0-9.]+")){
             ok = true;
         }
         return ok;
