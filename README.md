@@ -34,7 +34,7 @@ import org.junit.jupiter.api.Test;
 Neccessary @'s:
 
 ```java
- @BeforeEach
+    @BeforeEach
     public void initEach() {
         this.mainFrame = new MainFrame();
     }
